@@ -1,0 +1,78 @@
+# 共用 RPC 設定（與 rpc_profiles.py 同目錄；複製 utils 整包即可帶走）
+# ─────────────────────────────────────────────────────────────
+# [chains.<key>] 的 <key> 對應業務 config 里的 chain 字串。
+# 若某專案要加私鏈／測試鏈，在下面追加新段落即可。
+#
+# 欄位：name, chain_id, urls（必填若干 URL）, default（可選）
+#       native_symbol, explorer_tx_url, poa（均可選）
+
+# ─── Ethereum Mainnet ────────────────────────────────────────
+[chains.eth_mainnet]
+name = "Ethereum Mainnet"
+chain_id = 1
+native_symbol = "ETH"
+poa = false
+explorer_tx_url = "https://etherscan.io/tx/{tx_hash}"
+default = "https://ethereum-rpc.publicnode.com"
+urls = [
+  "https://ethereum-rpc.publicnode.com",
+  "https://eth.blockrazor.xyz",
+  "https://eth.drpc.org",
+  "https://0xrpc.io/eth",
+]
+
+# ─── BNB Smart Chain ───────────────────────────────────────────
+[chains.bsc_mainnet]
+name = "BNB Smart Chain Mainnet"
+chain_id = 56
+native_symbol = "BNB"
+poa = true
+explorer_tx_url = "https://bscscan.com/tx/{tx_hash}"
+default = "https://bsc-rpc.publicnode.com"
+urls = [
+  "https://bsc-rpc.publicnode.com",
+  "https://bsc-dataseed.binance.org",
+  "https://bsc.drpc.org",
+]
+
+# ─── Base ─────────────────────────────────────────────────────
+[chains.base_mainnet]
+name = "Base Mainnet"
+chain_id = 8453
+native_symbol = "ETH"
+poa = false
+explorer_tx_url = "https://basescan.org/tx/{tx_hash}"
+default = "https://base-rpc.publicnode.com"
+urls = [
+  "https://base-rpc.publicnode.com",
+  "https://mainnet.base.org",
+  "https://base.drpc.org",
+]
+
+# ─── Optimism ─────────────────────────────────────────────────
+[chains.op_mainnet]
+name = "Optimism Mainnet"
+chain_id = 10
+native_symbol = "ETH"
+poa = false
+explorer_tx_url = "https://optimistic.etherscan.io/tx/{tx_hash}"
+default = "https://optimism.publicnode.com"
+urls = [
+  "https://optimism.publicnode.com",
+  "https://mainnet.optimism.io",
+  "https://optimism.drpc.org",
+]
+
+# ─── Polygon PoS ──────────────────────────────────────────────
+[chains.polygon_mainnet]
+name = "Polygon PoS Mainnet"
+chain_id = 137
+native_symbol = "POL"
+poa = true
+explorer_tx_url = "https://polygonscan.com/tx/{tx_hash}"
+default = "https://polygon-bor.publicnode.com"
+urls = [
+  "https://polygon-bor.publicnode.com",
+  "https://polygon.drpc.org",
+  "https://1rpc.io/matic",
+]

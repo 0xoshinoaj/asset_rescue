@@ -1,0 +1,22 @@
+[network]
+# 鏈設定鍵值，對應 utils/rpc.toml 的 [chains.<key>]
+chain = "bsc_mainnet"
+# token 模式：ERC-20 合約地址
+token_address = "0x..."
+
+[transfer]
+# kind: token 或 native
+kind = "token"
+# 可填十進位字串（例如 "1.25"），或 "all" 全轉
+amount = "all"
+
+# 授權有效秒數（建議短，但要能被鏈上打包）
+valid_window_seconds = 30
+
+# 安全錢包 B（最終接收地址）
+# 可由 .env 的 SAFE_WALLET_B_ADDRESS 覆蓋
+safe_wallet_b_address = "0x..."
+
+[tx]
+# gas_limit 是「最多可消耗」而非固定花費
+gas_limit = 150000

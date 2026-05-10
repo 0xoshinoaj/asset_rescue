@@ -1,0 +1,33 @@
+# Python 虛擬環境
+venv/
+env/
+*.venv
+*.virtualenv
+
+# 配置文件（包含敏感信息）
+.env
+wallets.xlsx
+proxy.txt
+balance*.xlsx
+output/
+
+# macOS 系統檔案
+.DS_Store
+
+# Python 快取
+__pycache__/
+*.py[cod]
+
+# 測試/工具快取
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# 通用
+*.log

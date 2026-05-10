@@ -1,0 +1,4 @@
+web3
+eth-account
+python-dotenv
+tomli; python_version < "3.11"
