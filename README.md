@@ -1,6 +1,6 @@
-# 快速逃脫腳本（Python 版）
+# 資產救援工具（asset_rescue）
 
-在私鑰已外洩的情境下，盡快把 **ERC-20** 從被盜地址轉到安全地址：優先使用 **EIP-3009**（`transferWithAuthorization`，由安全錢包 A 付 Gas）；若不支援則嘗試 **EIP-2612 permit**；兩者皆無則程式會**中止並提示**只能走一般 `transfer`／`approve`（高風險，需自行評估）。亦可選 **原生幣** 轉移模式。
+在私鑰已外洩的情境下，盡快把資產從被盜地址轉到安全地址：ERC-20 優先使用 **EIP-3009**（`transferWithAuthorization`，由安全錢包 A 付 Gas）；若不支援則嘗試 **EIP-2612 permit**；兩者皆無則程式會**中止並提示**只能走一般 `transfer`／`approve`（高風險，需自行評估）。亦可選 **原生幣** 轉移模式。
 
 ## 功能摘要
 
